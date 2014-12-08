@@ -1,0 +1,26 @@
+<article id="entry-<$mt:EntryID$>" class="entry-asset entry asset hentry" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="asset-header">
+    <h2 class="asset-name entry-title" itemprop="name"><a href="<$mt:EntryPermalink encode_html="1"$>"><$mt:EntryTitle$></a></h2>
+    <footer class="asset-meta">
+      <ul class="asset-meta-list">
+        <li class="asset-meta-list-item"><__trans phrase="Posted on [_1]"> <time datetime="<mt:entrydate format="%Y-%m-%d">"><mt:entrydate format="%Y-%b-%e"></time></li>
+        <li class="asset-meta-list-item"><__trans phrase="by [_1]"><span class="author entry-author vcard"><mt:EntryAuthorDisplayName></span></li>
+		<mt:EntryIfCategory>
+        <li class="asset-meta-list-item"><__trans phrase="in [_1]">
+          <mt:EntryCategories>
+          &nbsp;<a itemprop="articleSection" rel="tag" href="<$mt:CategoryArchiveLink$>"><$mt:CategoryLabel$></a>
+          </mt:EntryCategories>
+        </li>
+		</mt:EntryIfCategory>
+      </ul>
+    </footer>
+  </div>
+  <div class="asset-content entry-content" itemprop="articleBody">
+    <$mt:EntryBody$>
+  </div>
+  <mt:If tag="EntryMore" convert_breaks="0">
+  <div class="entry-more-link">
+    <a href="<$mt:EntryPermalink encode_html="1"$>" itemprop="url"><__trans phrase="Continue reading"></a>
+  </div>
+  </mt:If>
+</article>

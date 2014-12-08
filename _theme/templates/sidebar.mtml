@@ -1,0 +1,44 @@
+    <mt:ArchiveList archive_type="Monthly">
+        <mt:ArchiveListHeader>
+<nav class="widget-archive-monthly widget">
+  <h3 class="widget-header"><__trans phrase="[_1] Archives" params="<$mt:ArchiveTypeLabel$>"></h3>
+  <div class="widget-content">
+    <ol class="widget-list">
+        </mt:ArchiveListHeader>
+      <li class="widget-list-item"><a href="<$mt:ArchiveLink encode_html="1"$>"><__trans phrase="[_1] ([_2])" params="<$mt:ArchiveTitle$>%%<$mt:ArchiveCount$>"></a></li>
+        <mt:ArchiveListFooter>
+    </ol>
+  </div>
+</nav>
+        </mt:ArchiveListFooter>
+    </mt:ArchiveList>
+
+  <mt:If tag="BlogCategoryCount">
+<nav class="widget-archive-category widget">
+  <h3 class="widget-header"><__trans phrase="Categories"></h3>
+  <div class="widget-content">
+    <mt:TopLevelCategories>
+      <mt:SubCatIsFirst>
+    <ul class="widget-list">
+      </mt:SubCatIsFirst>
+      <mt:If tag="CategoryCount">
+      <li class="widget-list-item"><a href="<$mt:CategoryArchiveLink$>"<mt:If tag="CategoryDescription"> title="<$mt:CategoryDescription remove_html="1" encode_html="1"$>"</mt:If>><__trans phrase="[_1] ([_2])" params="<$mt:CategoryLabel$>%%<$mt:CategoryCount$>"></a>
+      <mt:Else>
+      <li class="widget-list-item"><$mt:CategoryLabel$>
+      </mt:If>
+      <$mt:SubCatsRecurse$>
+      </li>
+      <mt:SubCatIsLast>
+    </ul>
+      </mt:SubCatIsLast>
+    </mt:TopLevelCategories>
+  </div>
+</nav>
+  </mt:If>
+
+<div class="widget-syndication widget section">
+  <div class="widget-content">
+    <p><img src="<$mt:StaticWebPath$>images/status_icons/feed.gif" alt="<__trans phrase="Subscribe to feed">" width="9" height="9" /> <a href="<$mt:Link template="feed_recent"$>"><__trans phrase="Subscribe to this blog's feed"></a></p>
+  </div>
+</div>
+
