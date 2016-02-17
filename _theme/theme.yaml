@@ -77,5 +77,5 @@ elements:
           navigation:
             label: 'Navigation'
           sidebar:
-            label: 'sidebarあ'
+            label: 'sidebar'
 
