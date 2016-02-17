@@ -19,7 +19,7 @@ elements:
       templates:
         index:
           main_index:
-            label: 'Main Index'
+            label: 'Main Index～'
             outfile: 'index.html'
             rebuild_me: 1
           feed_recent:
