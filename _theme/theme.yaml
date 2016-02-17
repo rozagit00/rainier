@@ -27,7 +27,7 @@ elements:
             outfile: 'atom.xml'
             rebuild_me: 1
           styles:
-            label: 'Stylesheet'
+            label: 'Stylesheetしーと'
             outfile: 'styles.css'
             rebuild_me: 1
           styles_ie:
