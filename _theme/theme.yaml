@@ -50,7 +50,7 @@ elements:
                 archive_type: 'Individual'
         page:
           page:
-            label: 'Page'
+            label: 'Pageい'
             mappings:
               page:
                 archive_type: 'Page'
